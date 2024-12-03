@@ -1,7 +1,9 @@
 const WebSocket = require('ws');
 const { log } = require('node:util');
 
-const wss = new WebSocket.Server({ port: 8080 });
+const PORT = process.env.PORT || 8080;
+
+const wss = new WebSocket.Server({ port: PORT });
 
 wss.on('connection', socket => {
 	console.log('Session started');
