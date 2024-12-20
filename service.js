@@ -48,6 +48,7 @@ wss.on('connection', socket => {
 					break;
 					default :
 						response = `Sorry, I don't have answers on your question. Please send another question.`;
+						break;
 				}
 
 			socket.send(JSON.stringify({ response }));
